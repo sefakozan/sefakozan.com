@@ -1,2 +1,2 @@
-# riskey.github.io
+# SefaKozan.github.io
 SefaKozan github web sitesi
