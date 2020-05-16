@@ -1,2 +1,2 @@
-# SefaKozan.github.io
-SefaKozan github web sitesi
+# sefakozan.github.io
+Kişisel Web Sitesi
