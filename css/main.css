@@ -3,7 +3,29 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+                                  
 }
+
+html {
+    overflow: hidden;
+}
+
+.draggable {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#name4{
+    margin-right: 15px;
+}
+
 
 html {
     background-color: #111111;
@@ -239,6 +261,13 @@ ul li a {
     font-weight: 500;
     color: white;
     font-size: 58px;
+  }
+
+  #name4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 58px;
     margin-left: 15px;
   }
 
@@ -303,8 +332,14 @@ ul li a {
     font-weight: 500;
     color: white;
     font-size: 32px;
-    margin-left: 0px;
    
+  }
+  #name4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 32px;
+    margin-left: 0px;
   }
 
   #content-text-logo{
@@ -355,6 +390,10 @@ ul li  {
     
 }
 
+.draggable {
+    display: inline-block;
+    margin-right: 10px;
+}
 
 
 
