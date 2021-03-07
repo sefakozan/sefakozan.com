@@ -1,1 +1,111 @@
-Yapım aşaması devam etmektedir.
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Happy Index</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+    <meta name="description" content="Yapay Zeka Algoritmalarıyla Mutluluk İndeksi Hesaplama (Happy Index)"/>
+    <meta name="author" content="Muhammet Sefa Kozan"/>
+
+    <!-- Javascript Kod Dosyaları -->
+    <script defer src="assets/tf.min.js"></script>
+    <script defer src="assets/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <!-- CSS Style Dosyaları -->
+    <link rel="stylesheet" href="assets/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="loader" class="loader-wrapper is-active">
+      <div class="loader is-loading"></div>
+    </div>
+
+    <div class="columns p-4 banner" style="height: 10vh;">
+      <h1 class="header">YAPAY ZEKA UYGULAMALARI İLE DOĞRU MASKE KULLANIM ORANI VE MUTLULUK İNDEKSİ HESAPLAMA  (HAPPY INDEX)</h1>
+    </div>
+    <div class="columns p-4" style="height: 30vh;">
+      <div class="column">
+        <div class="box">
+          <div class="title is-5">Ölçüm Yapılan Kadın Sayısı: <span class="sayilar"> <span id="kadin-sayisi" class="is-6"> 0
+              </span></span> </div>
+          <div class="title is-5">Ölçüm Yapılan Erkek Sayısı: <span class="sayilar"> <span id="erkek-sayisi" class="is-6"> 0
+              </span></span> </div>
+          <div class="title is-5">Ortalama Mutluluk Oranı: <span class="sayilar">%<span id="ortalama-mutluluk-orani"
+                class="is-6"> 0 </span> </span></div>
+          <div class="title is-5">Kadınların Mutluluk Oranı: <span class="sayilar">%<span id="kadinlarin-mutluluk-orani"
+                class="is-6"> 0 </span> </span></div>
+          <div class="title is-5">Erkeklerin Mutluluk Oranı: <span class="sayilar">%<span id="erkeklerin-mutluluk-orani"
+                class="is-6"> 0 </span> </span></div>
+        </div>
+      </div>
+      <div class="column is-narrow center">
+        <div class="box" style="width: 150px;text-align: center;">
+          <p id="saat" class="title is-5 text-center">
+            00:00
+          </p>
+          <div class="saat-sayi"></div>
+          <p id="yüz-sayisi" class="title is-5 text-center">
+            0
+          </p>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="box">
+
+          <div class="title is-5">Maske Kullanım Oranı: <span class="sayilar">%<span id="maske-oran-1" class="is-6"> 0</span></span> </div>
+          <div class="title is-5">Doğru Maske Kullanım Oranı: <span class="sayilar">%<span id="maske-oran-2" class="is-6"> 0</span></span> </div>
+
+          <div class="columns is-mobile">
+            <div class="column is-half">
+              <div class="title is-5">0-24 Yaş Mutluluk Oranı: <span class="sayilar">%<span id="yas-1" class="is-6"> 0 </span></span> </div>
+              <div class="title is-5">25-34 Yaş Mutluluk Oranı: <span class="sayilar">%<span id="yas-2" class="is-6"> 0 </span></span> </div>
+              <div class="title is-5">55+ Yaş Mutluluk Oranı: <span class="sayilar">%<span id="yas-5" class="is-6"> 0 </span></span> </div>
+            </div>
+          
+            <div class="column">
+              <div class="title is-5">35-44 Yaş Mutluluk Oranı: <span class="sayilar">%<span id="yas-3" class="is-6"> 0 </span></span> </div>
+              <div class="title is-5">45-54 Yaş Mutluluk Oranı: <span class="sayilar">%<span id="yas-4" class="is-6"> 0 </span></span> </div>
+              <div class="title is-5">Saniyedeki Ölçüm Sayısı(FPS): <span class="sayilar"><span id="fps" class="is-6"> 0 </span></span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="columns is-align-items-flex-end  p-4" style="height: 60vh;">
+      <div class="column">
+        <div class="box" style="min-height: 400px;align-items: stretch;">
+          <div id="video-div">
+            <video id="video" autoplay muted></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-narrow">
+        <div style="width: 56px;height: 600px;border: 2px solid #00947e;padding: 1px;display: flex;">
+          <div id="oran-bari" style="width: 52px;height: 50%;align-self: flex-end;display: inline-block;"
+            class="has-text-primary-light	p-1	">%50</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="box" style="height: 515px;align-items: stretch;">
+          <div id="image-div">
+            <canvas id="face-canvas" width=128 height=128></canvas>
+          </div>
+          <div>
+            <p id="analiz-yazi">HAPPY INDEX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
