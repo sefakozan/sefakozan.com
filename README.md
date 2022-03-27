@@ -1,3 +1,3 @@
 # sefakozan.com
-Kişisel Web Sitesi  
+Personal Website
 
