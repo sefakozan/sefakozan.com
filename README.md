@@ -1,3 +1,4 @@
-# sefakozan.github.io
-Personal Website
+# Personal Website
+
+![https://sefakozan.github.io](https://sefakozan.github.io/)
 
