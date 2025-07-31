@@ -1,3 +1,3 @@
-# sefakozan.com
+# sefakozan.github.io
 Personal Website
 
